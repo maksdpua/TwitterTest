@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s4s-jS-rvL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -82,20 +82,26 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cDc-dR-LFV"/>
+                                    <constraint firstAttribute="width" constant="174" id="ern-7l-Sim"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="v7k-aP-mNm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vK5-4a-1P2" secondAttribute="bottom" constant="20" id="2K8-La-g8M"/>
                             <constraint firstItem="BYx-2G-LQK" firstAttribute="top" secondItem="sO5-8j-Jy2" secondAttribute="bottom" constant="30" id="7Cj-21-E58"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="height" secondItem="MsX-ET-5Pq" secondAttribute="height" multiplier="0.1" id="8Fc-FO-oda"/>
-                            <constraint firstItem="sO5-8j-Jy2" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" id="8dZ-xD-t1t"/>
+                            <constraint firstItem="sO5-8j-Jy2" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" multiplier="1.25" id="8dZ-xD-t1t"/>
+                            <constraint firstItem="vK5-4a-1P2" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="CXi-Vy-DAe"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="height" secondItem="MsX-ET-5Pq" secondAttribute="height" multiplier="0.25" id="KaY-Dd-aGx"/>
                             <constraint firstItem="sO5-8j-Jy2" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="M4g-Ov-vA9"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" multiplier="0.1" id="PQ6-Xc-ZY5"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="avF-dB-PWk"/>
                             <constraint firstItem="BYx-2G-LQK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MsX-ET-5Pq" secondAttribute="leadingMargin" constant="5" id="hjU-Bb-CZ3"/>
                             <constraint firstItem="BYx-2G-LQK" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="ibf-2s-CSB"/>
-                            <constraint firstItem="vK5-4a-1P2" firstAttribute="top" secondItem="BYx-2G-LQK" secondAttribute="bottom" constant="30" id="mtN-10-i5G"/>
+                            <constraint firstItem="vK5-4a-1P2" firstAttribute="top" relation="lessThanOrEqual" secondItem="BYx-2G-LQK" secondAttribute="bottom" constant="80" id="mtN-10-i5G"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BYx-2G-LQK" secondAttribute="trailing" constant="5" id="sqr-3e-jFI"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" id="ucg-EY-ZP8"/>
                         </constraints>
