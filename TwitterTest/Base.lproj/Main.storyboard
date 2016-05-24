@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -60,13 +61,13 @@
                                     <constraint firstAttribute="width" secondItem="MFh-Yg-Nw1" secondAttribute="height" multiplier="1:1" id="80h-Kt-USx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO5-8j-Jy2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO5-8j-Jy2">
                                 <rect key="frame" x="192" y="375" width="214" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a Twitter clien for test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYx-2G-LQK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a Twitter clien for test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYx-2G-LQK">
                                 <rect key="frame" x="191" y="422" width="219" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +78,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-Bo-UQy">
                                         <rect key="frame" x="64" y="8" width="46" height="30"/>
-                                        <state key="normal" title="Login"/>
+                                        <state key="normal" title="Log In"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +86,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="BYx-2G-LQK" firstAttribute="top" secondItem="sO5-8j-Jy2" secondAttribute="bottom" constant="30" id="7Cj-21-E58"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="height" secondItem="MsX-ET-5Pq" secondAttribute="height" multiplier="0.1" id="8Fc-FO-oda"/>
+                            <constraint firstItem="sO5-8j-Jy2" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" id="8dZ-xD-t1t"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="height" secondItem="MsX-ET-5Pq" secondAttribute="height" multiplier="0.25" id="KaY-Dd-aGx"/>
+                            <constraint firstItem="sO5-8j-Jy2" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="M4g-Ov-vA9"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" multiplier="0.1" id="PQ6-Xc-ZY5"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="avF-dB-PWk"/>
+                            <constraint firstItem="BYx-2G-LQK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MsX-ET-5Pq" secondAttribute="leadingMargin" constant="5" id="hjU-Bb-CZ3"/>
+                            <constraint firstItem="BYx-2G-LQK" firstAttribute="centerX" secondItem="MsX-ET-5Pq" secondAttribute="centerX" id="ibf-2s-CSB"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BYx-2G-LQK" secondAttribute="trailing" constant="5" id="sqr-3e-jFI"/>
                             <constraint firstItem="MFh-Yg-Nw1" firstAttribute="centerY" secondItem="MsX-ET-5Pq" secondAttribute="centerY" id="ucg-EY-ZP8"/>
                         </constraints>
                         <variation key="default">
