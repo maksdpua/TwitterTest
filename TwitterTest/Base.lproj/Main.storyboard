@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="TwitterTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-rM-lhZ">
+                                <rect key="frame" x="260" y="260" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="M84-5h-ys6"/>
+                                    <constraint firstAttribute="width" constant="80" id="Qkg-s3-BQq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aJh-rM-lhZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OKE-d6-8IA"/>
+                            <constraint firstItem="aJh-rM-lhZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIa-bi-iYq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="reW-WY-sFQ" kind="presentation" identifier="TabTapedViewSeque" id="QOo-GS-vP2"/>
+                        <segue destination="s4s-jS-rvL" kind="presentation" identifier="LoginSegue" id="npz-cN-AwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="304"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w2l-YI-cka">
+            <objects>
+                <viewController id="s4s-jS-rvL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5B-1v-Iaw"/>
+                        <viewControllerLayoutGuide type="bottom" id="v7k-aP-mNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MsX-ET-5Pq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uim-Vq-OcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="1089"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cPW-Cg-7T7">
+            <objects>
+                <tabBarController id="reW-WY-sFQ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="f55-VK-z2C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="C5w-2g-ILm" kind="relationship" relationship="viewControllers" id="ozU-Oo-Aqj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ytd-rg-kA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="304"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="aVi-d6-u9Y">
+            <objects>
+                <viewController id="C5w-2g-ILm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bZf-aa-Rdo"/>
+                        <viewControllerLayoutGuide type="bottom" id="yv4-Hv-lLr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ilq-Pr-dph">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="xqQ-hZ-kjP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0W-KP-JCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1819" y="304"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-Twitter" width="210" height="210"/>
+    </resources>
+</document>
