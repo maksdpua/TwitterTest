@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DA433141CF585E8009326D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA433131CF585E8009326D0 /* LoginViewController.swift */; };
+		2DA433191CF58D57009326D0 /* TwitterLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA433181CF58D57009326D0 /* TwitterLoginDelegate.swift */; };
 		FC58EDF01CF4A628001C7E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58EDEF1CF4A628001C7E41 /* AppDelegate.swift */; };
 		FC58EDF51CF4A628001C7E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58EDF31CF4A628001C7E41 /* Main.storyboard */; };
 		FC58EDF71CF4A628001C7E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC58EDF61CF4A628001C7E41 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DA433131CF585E8009326D0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = GUI/LoginViewController.swift; sourceTree = "<group>"; };
+		2DA433181CF58D57009326D0 /* TwitterLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterLoginDelegate.swift; path = GUI/TwitterLoginDelegate.swift; sourceTree = "<group>"; };
 		FC58EDEC1CF4A628001C7E41 /* TwitterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC58EDEF1CF4A628001C7E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC58EDF41CF4A628001C7E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +39,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA433151CF58CBF009326D0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		FC58EDE31CF4A628001C7E41 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +65,7 @@
 		FC58EDEE1CF4A628001C7E41 /* TwitterTest */ = {
 			isa = PBXGroup;
 			children = (
+				2DA433151CF58CBF009326D0 /* Classes */,
 				FC58EE011CF4A79E001C7E41 /* GUI */,
 				FC58EDEF1CF4A628001C7E41 /* AppDelegate.swift */,
 				FC58EDF31CF4A628001C7E41 /* Main.storyboard */,
@@ -68,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				FC58EE021CF4A807001C7E41 /* SplashViewController.swift */,
+				2DA433131CF585E8009326D0 /* LoginViewController.swift */,
+				2DA433181CF58D57009326D0 /* TwitterLoginDelegate.swift */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -144,6 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA433191CF58D57009326D0 /* TwitterLoginDelegate.swift in Sources */,
+				2DA433141CF585E8009326D0 /* LoginViewController.swift in Sources */,
 				FC58EDF01CF4A628001C7E41 /* AppDelegate.swift in Sources */,
 				FC58EE031CF4A807001C7E41 /* SplashViewController.swift in Sources */,
 			);
@@ -295,6 +311,7 @@
 				FC58EE001CF4A628001C7E41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
