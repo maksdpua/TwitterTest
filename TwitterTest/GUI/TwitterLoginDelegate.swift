@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol TwitterLoginDelegate {
+protocol TwitterLoginDelegate: class {
     func continueLogin()
 }

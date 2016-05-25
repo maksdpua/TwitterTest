@@ -18,6 +18,8 @@ class TwitterClient: BDBOAuth1SessionManager {
     var loginSuccess: (()->())?
     var loginFailure: ((NSError)->())?
     
+    weak var delegate: TwitterLoginDelegate?
+    
     //Getting request token to open up auth link in safari
     func login(success: ()->(), failure: (NSError) -> () ) {
         loginSuccess = success
@@ -47,13 +49,40 @@ class TwitterClient: BDBOAuth1SessionManager {
         
         //Getting access token
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: requestToken, success: { (accessToken) in
+            
+            self.currentAccount({ (user: User) in
+                //Calling setter and saving user
+                User.currentUser = user
                 self.loginSuccess?()
-            // TODO:
-            }) { (error) in
-                print("Error: \(error.localizedDescription)")
-                self.loginFailure?(error)
+                self.delegate?.continueLogin()
+                }, failure: { (error) in
+                    self.loginFailure?(error)
+            })
+            
+        }) { (error) in
+            print("Error: \(error.localizedDescription)")
+            self.loginFailure?(error)
         }
     }
     
+    //Get the current
+    func currentAccount(success: (User) -> (), failure: (NSError) -> ()) {
+        GET("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task, response) in
+            let userDictionary = response as! NSDictionary
+            let user = User(dictionary: userDictionary)
+            success(user)
+            }) { (task, error) in
+                print("Error: \(error.localizedDescription)")
+                failure(error)
+        }
+    }
+    
+    // MARK: LOGOUT
+    func logout() {
+        User.currentUser = nil
+        deauthorize()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
+    }
     
 }

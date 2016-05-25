@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: UIViewController, TwitterLoginDelegate {
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
@@ -16,6 +16,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        TwitterClient.sharedInstance.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,9 +38,19 @@ class SplashViewController: UIViewController {
         self.performSegueWithIdentifier("LoginSegue", sender: self)
     }
     
+    func goToApp() {
+        self.performSegueWithIdentifier("TabTapedViewSegue", sender: self)
+    }
+    
+    
+    
     func continueLogin() {
         appDelegate.splashDeleay = false
-        self.goToLogin()
+        if User.currentUser == nil {
+            self.goToLogin()
+        } else {
+            self.goToApp()
+        }
     }
     
 }

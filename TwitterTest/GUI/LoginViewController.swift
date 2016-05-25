@@ -69,7 +69,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginButton() {
-        
+        TwitterClient.sharedInstance.login({
+            print("Logged In")
+            self.dismissViewControllerAnimated(true, completion: {
+                
+            })
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 
     

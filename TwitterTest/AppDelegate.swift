@@ -42,9 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-//    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-//        
-//    }
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        TwitterClient.sharedInstance.handleOpenURL(url)
+        return true
+    }
 
 }
 
