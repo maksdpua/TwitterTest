@@ -79,6 +79,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5h-Bo-UQy">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="44"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="onLoginButton" destination="s4s-jS-rvL" eventType="touchUpInside" id="fbk-kv-dri"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

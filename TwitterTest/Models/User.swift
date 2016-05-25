@@ -1,5 +1,5 @@
 //
-//  TwitterLoginDelegate.swift
+//  User.swift
 //  TwitterTest
 //
 //  Created by Maks on 5/25/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol TwitterLoginDelegate {
-    func continueLogin()
+class User {
+    
 }

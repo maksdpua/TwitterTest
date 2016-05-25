@@ -21,7 +21,22 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let color1 = UIColor(red: 42.0/255.0, green: 163.0/255.0, blue: 239.0/255.0, alpha: 1.0)
+        let color2 = UIColor(red: 88.0/255.0, green: 178.0/255.0, blue: 235.0/255.0, alpha: 1.0)
+        let color3 = UIColor(red: 141.0/255.0, green: 192.0/255.0, blue: 231.0/255.0, alpha: 1.0)
+        let color4 = UIColor(red: 224.0/255.0, green: 226.0/255.0, blue: 228.0/255.0, alpha: 1.0)
+        
+        let gradientColor: [CGColor] = [color1.CGColor, color2.CGColor, color3.CGColor, color4.CGColor]
+        let gradientLocations: [Float] = [0.0, 0.25, 0.75, 1.0]
+        
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.colors = gradientColor
+        gradientLayer.locations = gradientLocations
+        
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, atIndex: 0)
+        
         buttonContainerView.layer.cornerRadius = 5
         
         buttonContainerView.alpha = 0
@@ -40,7 +55,7 @@ class LoginViewController: UIViewController {
         logoHeightOriginalConstraint.active = false
         logoHeightSmallerConstraint.active = true
         
-        UIView.animateWithDuration(1.5) {
+        UIView.animateWithDuration(1.0) {
             self.view.layoutIfNeeded()
             
             self.buttonContainerView.alpha = 1
@@ -51,6 +66,10 @@ class LoginViewController: UIViewController {
             self.titleLabel.frame = CGRectOffset(self.titleLabel.frame, 0, -20)
             self.subtitleLabel.frame = CGRectOffset(self.subtitleLabel.frame, 0, -20)
         }
+    }
+    
+    @IBAction func onLoginButton() {
+        
     }
 
     
