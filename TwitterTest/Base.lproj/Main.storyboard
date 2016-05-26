@@ -154,7 +154,7 @@
         <!--Item-->
         <scene sceneID="aVi-d6-u9Y">
             <objects>
-                <viewController id="C5w-2g-ILm" sceneMemberID="viewController">
+                <viewController id="C5w-2g-ILm" customClass="HomeViewController" customModule="TwitterTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bZf-aa-Rdo"/>
                         <viewControllerLayoutGuide type="bottom" id="yv4-Hv-lLr"/>
@@ -162,7 +162,26 @@
                     <view key="view" contentMode="scaleToFill" id="Ilq-Pr-dph">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPR-1s-TFU">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="IiC-3W-Ffa"/>
+                                    <constraint firstAttribute="height" constant="30" id="pc9-CA-S5o"/>
+                                </constraints>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout" destination="C5w-2g-ILm" eventType="touchUpInside" id="wfO-7M-zEU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25104652321378784" green="0.72973213509209289" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OPR-1s-TFU" firstAttribute="centerY" secondItem="Ilq-Pr-dph" secondAttribute="centerY" id="dWu-vh-iBA"/>
+                            <constraint firstItem="OPR-1s-TFU" firstAttribute="centerX" secondItem="Ilq-Pr-dph" secondAttribute="centerX" id="idq-dD-3CH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="xqQ-hZ-kjP"/>
                 </viewController>

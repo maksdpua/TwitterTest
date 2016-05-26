@@ -30,7 +30,7 @@ class TwitterClient: BDBOAuth1SessionManager {
         fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "twittertest://oauth"), scope: nil, success: { (requestToken) in
             print("Got token")
             
-            let url = NSURL(string: "https://api.twitter.com/oauth/authenticate?oauth_token" + requestToken.token)!
+            let url = NSURL(string: "https://api.twitter.com/oauth/authenticate?oauth_token=" + requestToken.token)!
             
             UIApplication.sharedApplication().openURL(url)
             }) { (error) in
